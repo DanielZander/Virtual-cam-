@@ -224,7 +224,7 @@ filter_dictionary = {"eye_track": eye_rectangle, "static_mesh": face_mesh_overla
 
 
 _,frame1 = vid.read()
-with pyvirtualcam.Camera(width=frame1.shape[1], height=frame1.shape[0], fps=602) as cam:
+with pyvirtualcam.Camera(width=frame1.shape[1], height=frame1.shape[0], fps=60) as cam:
          
     while True:
         # Check for key events to change filter_typer
