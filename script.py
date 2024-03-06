@@ -31,11 +31,18 @@ poly_color = (255,255,255)
 # FACE SCAN = 2
 # STATIC MESH = 3
 # POLYGRAPH EFFECT = 4
+# EYE TRACK = 5
 # NO FILTER = 0
 # EXIT VIRTUAL CAM = q
 #########################KEYBINDNINGS FOR FILTERS##############################
 
-vid = cv2.VideoCapture(0) # 0 = obs_virtual_camera. 
+vid = cv2.VideoCapture(1) 
+
+#########################VIDEOSTREAM INPUT OPTIONS#############################
+# 0 = your actual webcamera - this is used for when you want to play around with the filters yourself, with your face as input.
+# 1 = OBS-virtual-Camera, the integrated one (not plugin) - this is to be used when you want to put a filter on a particpant face from OBS stream.
+#########################VIDEOSTREAM INPUT OPTIONS#############################
+
 vid.set(cv2.CAP_PROP_FRAME_WIDTH,width)
 vid.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 
@@ -43,7 +50,7 @@ vid.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 def default(frame):
     return frame
 #
-"""
+"""0
 def face_mesh_overlay1(frame):
     global default_color
     default_color = (225,225,225)
@@ -241,10 +248,9 @@ with pyvirtualcam.Camera(width=frame1.shape[1], height=frame1.shape[0], fps=60) 
             filter_type = "poly"
         elif keyboard.is_pressed('5'):
             filter_type = "eye_track"
-        elif keyboard.is_pressed('6'):
-            filter_type = "eye_track_static"   
         elif keyboard.is_pressed('0'):
             filter_type = "default"
+            
             
         # Capture the video frame by frame
         ret, frame = vid.read()
