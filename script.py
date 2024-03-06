@@ -36,21 +36,20 @@ poly_color = (255,255,255)
 # EXIT VIRTUAL CAM = q
 #########################KEYBINDNINGS FOR FILTERS##############################
 
-vid = cv2.VideoCapture(1) 
-
+vid = cv2.VideoCapture(2) 
+print(vid)
 #########################VIDEOSTREAM INPUT OPTIONS#############################
-# 0 = your actual webcamera - this is used for when you want to play around with the filters yourself, with your face as input.
-# 1 = OBS-virtual-Camera, the integrated one (not plugin) - this is to be used when you want to put a filter on a particpant face from OBS stream.
+# 0 = your actual webcamera - this is used for when you want to play around with the filters yourself, with the videostream from you acutal webcam as input.
+# 2 = OBS-plugin virtual cam - used when you want the OBS-capture of participant as input to script. 0q
 #########################VIDEOSTREAM INPUT OPTIONS#############################
 
-vid.set(cv2.CAP_PROP_FRAME_WIDTH,width)
 vid.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 
 
 def default(frame):
     return frame
-#
-"""0
+
+"""
 def face_mesh_overlay1(frame):
     global default_color
     default_color = (225,225,225)
@@ -60,7 +59,7 @@ def face_mesh_overlay1(frame):
         q
         for facial_landmarks in result.multi_face_landmarks:
             for i in range(0, 468):
-                landmark = facial_landmarks.landmark[i]
+                landmark = facial_landmarks.landmark[i]q
                 locx = int(landmark.x * width)
                 locy = int(landmark.y * height)
                 cv2.circle(frame, (locx, locy), 2, default_color, 1)
