@@ -42,7 +42,7 @@ Setup for self-use/filter testing:
 Note: usually takes a few seconds to open up.
 4. In the tope panel, click flike and then open. 
 5. Browse to the file name 'script' in your designated folder and double click it. 
-6. Scroll down to line 39 of the script and make sure that the index = 0. 
+6. Scroll down to line 16 of the script and make sure that the videocapture index = 0. (The line defining vid = cv2.VideoCapture()). 
 7. Have "OBS Virtual Camera" selected as input source on zoom. 
 8. Run the script by pressing the play button in spyder. 
 
@@ -53,7 +53,7 @@ Setup for experiment:
 4. type: spyder
 Note: usually takes a few seconds to open up.
 5. Browse to the file name 'script' in your designated folder and double click it (assuming it is not already opened in spyder).
-6.  Scroll down to line 39 of the script and change the videocapture index to 1 or 2, if one doesnt work, try the other. 
+6.  Scroll down to line 16 of the script and change the videocapture index to 1 or 2, if one doesnt work, try the other
 Note: these indices refer to different cameras (virutal or otherwise) that are recognized by windows. You want to find the virtual camera plugin and use it as input since the script will per default send frames to the built-in version. 
 7. Have "OBS Virtual Camera" selected as input source on zoom. 
 8. Run the script by pressing the play button in spyder. 
