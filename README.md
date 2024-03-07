@@ -5,7 +5,7 @@ INSTALLATION and REQUIRMENTS
 
 OBS comes with an integrated virtual camera feature, but it provides only a single camera instance, 
 so it is not possible to send frames from the the built-in OBS virtual Camera to Python, do manipulations
- to the videostream and then send these frames to zoom using the same virutal camera. 
+to the videostream and then send these frames to zoom using the same virtual camera. 
 Therefore, the filter pipeline requires two seperate virtucal camera extensions. 
 One working as an input source from OBS to the script and the other as input source to zoom (or some other platform). 
 Thankfully there is an old plugin that still works fine and that can be used simultaneously as the one already integrated in OBS. 
@@ -24,7 +24,7 @@ Once both of these are installed:
 1. Open OBS, 
 2. Select tools from the top panel, 
 3. select the option that says VirtucalCam, 
-4.  In the options menu check the autostart option, this will have the plugin virtual camera be availble as input to script whenever you open OBS. 
+4. In the options menu check the autostart option, this will have the plugin virtual camera be availble as input to script whenever you open OBS. 
 
 Installing virtual environment: 
 1. If you havent already, go to https://github.com/DanielZander/Virtual-cam- and make sure all files are download in a seperate folder. 
@@ -39,6 +39,7 @@ Setup for self-use/filter testing:
 1. Open anaconda promt.
 2. type: conda activate virtual_filter
 3. type: spyder
+
 Note: usually takes a few seconds to open up.
 4. In the tope panel, click flike and then open. 
 5. Browse to the file name 'script' in your designated folder and double click it. 
@@ -51,9 +52,11 @@ Setup for experiment:
 2. Open anaconda promt.
 3. type: conda activate virtual_filter
 4. type: spyder
+
 Note: usually takes a few seconds to open up.
 5. Browse to the file name 'script' in your designated folder and double click it (assuming it is not already opened in spyder).
 6.  Scroll down to line 39 of the script and change the videocapture index to 1 or 2, if one doesnt work, try the other. 
+
 Note: these indices refer to different cameras (virutal or otherwise) that are recognized by windows. You want to find the virtual camera plugin and use it as input since the script will per default send frames to the built-in version. 
 7. Have "OBS Virtual Camera" selected as input source on zoom. 
 8. Run the script by pressing the play button in spyder. 
