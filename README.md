@@ -39,7 +39,6 @@ Setup for self-use/filter testing:
 1. Open anaconda promt.
 2. type: conda activate virtual_filter
 3. type: spyder
-
 Note: usually takes a few seconds to open up.
 4. In the tope panel, click flike and then open. 
 5. Browse to the file name 'script' in your designated folder and double click it. 
