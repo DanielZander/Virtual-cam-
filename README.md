@@ -52,11 +52,9 @@ Setup for experiment:
 2. Open anaconda promt.
 3. type: conda activate virtual_filter
 4. type: spyder
-
 Note: usually takes a few seconds to open up.
 5. Browse to the file name 'script' in your designated folder and double click it (assuming it is not already opened in spyder).
 6.  Scroll down to line 39 of the script and change the videocapture index to 1 or 2, if one doesnt work, try the other. 
-
 Note: these indices refer to different cameras (virutal or otherwise) that are recognized by windows. You want to find the virtual camera plugin and use it as input since the script will per default send frames to the built-in version. 
 7. Have "OBS Virtual Camera" selected as input source on zoom. 
 8. Run the script by pressing the play button in spyder. 
