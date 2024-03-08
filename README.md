@@ -12,11 +12,11 @@ Thankfully there is an old plugin that still works fine and that can be used sim
 Here is a scetch of the workflow (more details later):
 
 1. OBS-screen capture of participants zoom window.
-2. This videostream of the participant is used as input to the python script using OBS-virtual camera plugin (lets call it VC1). 
+2. This videostream of the participant is used as input to the python script using OBS-virtual camera plugin. 
 3. The script allows for manipulation of the videostream and sends frames to the built-in virtual camera. 
 4. Select OBS Virtual Camera as input source on Zoom and you will be broadcasting frames from the script. 
 
-Make sure to install the following versions of Zoom and the virtual camera plugin (newer versions of OBS are incompatilble with the older plugin):
+Make sure to install the following versions of OBS and the virtual camera plugin (newer versions of OBS are incompatilble with the older plugin):
 Correct OBS-version: https://www.videohelp.com/software?d=OBS-Studio-26.0-Full-Installer-x64.exe
 Old Virtual camera plugin/addon: https://obsproject.com/forum/resources/obs-virtualcam.949/
 
